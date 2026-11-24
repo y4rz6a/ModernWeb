@@ -1,0 +1,3217 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>تأسیسات فراز | خدمات تخصصی ساختمان</title>
+
+<meta name="description" content="سرویس و تعمیر تخصصی پکیج، رادیاتور و کولر گازی">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+
+
+:root {
+
+    --dark: #08172f;
+
+    --blue: #10294e;
+
+    --blue-light: #174c82;
+
+    --orange: #ff8a23;
+
+    --white: #ffffff;
+
+    --muted: #8795aa;
+
+    --bg: #f6f8fc;
+
+}
+
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 90px;
+
+}
+
+
+
+body {
+
+    font-family: 'Vazirmatn', sans-serif;
+
+    background: var(--bg);
+
+    color: var(--dark);
+
+    overflow-x: hidden;
+
+}
+
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+
+button, input, textarea, select {
+
+    font-family: inherit;
+
+}
+
+
+
+::selection {
+
+    background: var(--orange);
+
+    color: white;
+
+}
+
+
+
+
+
+/* HEADER */
+
+
+
+header {
+
+    width: 100%;
+
+    padding: 20px 8%;
+
+    background: rgba(8, 23, 47, .97);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: white;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    border-bottom: 1px solid #ffffff12;
+
+    transition: padding .3s, box-shadow .3s, background .3s;
+
+}
+
+
+
+header.scrolled {
+
+    padding-top: 13px;
+
+    padding-bottom: 13px;
+
+    background: rgba(8, 23, 47, .94);
+
+    backdrop-filter: blur(14px);
+
+    box-shadow: 0 8px 30px #0002;
+
+}
+
+
+
+.logo {
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+}
+
+
+
+.logo span {
+
+    color: var(--orange);
+
+}
+
+
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+
+nav a {
+
+    color: #c5d0df;
+
+    font-size: 13px;
+
+    position: relative;
+
+    transition: color .25s;
+
+}
+
+
+
+nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--orange);
+
+    bottom: -9px;
+
+    right: 0;
+
+    transition: width .3s;
+
+}
+
+
+
+nav a:hover,
+
+nav a.active {
+
+    color: white;
+
+}
+
+
+
+nav a:hover::after,
+
+nav a.active::after {
+
+    width: 100%;
+
+}
+
+
+
+.header-btn {
+
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    background: var(--orange);
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+
+
+.header-btn:hover {
+
+    background: #ff9c46;
+
+    box-shadow: 0 5px 20px #ff8a2350;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+.phone-icon {
+
+    margin-left: 7px;
+
+}
+
+
+
+.menu-toggle {
+
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+}
+
+
+
+
+
+/* HERO */
+
+
+
+.hero {
+
+    min-height: 570px;
+
+    padding: 80px 8%;
+
+    background:
+
+        radial-gradient(circle at 80% 40%, #164b82 0%, transparent 40%),
+
+        linear-gradient(120deg, #08172f, #10294e);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    color: white;
+
+    overflow: hidden;
+
+    position: relative;
+
+    isolation: isolate;
+
+}
+
+
+
+.hero-bg-circle {
+
+    position: absolute;
+
+    width: 550px;
+
+    height: 550px;
+
+    border-radius: 50%;
+
+    border: 1px solid #ffffff0a;
+
+    top: -250px;
+
+    left: 20%;
+
+    z-index: -1;
+
+}
+
+
+
+.hero-grid {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    opacity: .12;
+
+    background-image:
+
+        linear-gradient(#ffffff10 1px, transparent 1px),
+
+        linear-gradient(90deg, #ffffff10 1px, transparent 1px);
+
+    background-size: 65px 65px;
+
+    mask-image: linear-gradient(to left, black, transparent 75%);
+
+}
+
+
+
+.hero-content {
+
+    max-width: 550px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+.tag {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--orange);
+
+    font-size: 12px;
+
+    background: #ff8a2317;
+
+    border: 1px solid #ff8a2340;
+
+    padding: 9px 15px;
+
+    border-radius: 30px;
+
+    margin-bottom: 24px;
+
+}
+
+
+
+.status-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    background: var(--orange);
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 4px #ff8a2320;
+
+    animation: pulse 2s infinite;
+
+}
+
+
+
+.hero h1 {
+
+    font-size: clamp(32px, 4vw, 49px);
+
+    line-height: 1.7;
+
+    font-weight: 800;
+
+}
+
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: var(--orange);
+
+}
+
+
+
+.hero p {
+
+    color: #b8c6d9;
+
+    line-height: 2.4;
+
+    font-size: 14px;
+
+    margin: 20px 0 30px;
+
+}
+
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 13px;
+
+    flex-wrap: wrap;
+
+}
+
+
+
+.primary-btn,
+
+.secondary-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 14px 23px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: transform .3s, background .3s, box-shadow .3s;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+.primary-btn {
+
+    background: var(--orange);
+
+    color: white;
+
+}
+
+
+
+.primary-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -50%;
+
+    right: -100%;
+
+    width: 60%;
+
+    height: 200%;
+
+    transform: rotate(25deg);
+
+    background: #ffffff35;
+
+    transition: right .5s;
+
+}
+
+
+
+.primary-btn:hover::before {
+
+    right: 150%;
+
+}
+
+
+
+.primary-btn:hover {
+
+    background: #ff9c46;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px #ff8a2340;
+
+}
+
+
+
+.primary-btn span,
+
+.more span {
+
+    transition: transform .3s;
+
+}
+
+
+
+.primary-btn:hover span,
+
+.more:hover span {
+
+    transform: translateX(-4px);
+
+}
+
+
+
+.secondary-btn {
+
+    border: 1px solid #ffffff35;
+
+    color: white;
+
+}
+
+
+
+.secondary-btn:hover {
+
+    background: #ffffff12;
+
+    border-color: var(--orange);
+
+    transform: translateY(-3px);
+
+}
+
+
+
+.hero-trust {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 40px;
+
+    color: #9cacc2;
+
+    font-size: 12px;
+
+}
+
+
+
+.trust-line {
+
+    width: 35px;
+
+    height: 2px;
+
+    background: var(--orange);
+
+}
+
+
+
+
+
+/* HERO VISUAL */
+
+
+
+.hero-visual {
+
+    width: 390px;
+
+    height: 390px;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+}
+
+
+
+.visual-circle {
+
+    position: absolute;
+
+    width: 330px;
+
+    height: 330px;
+
+    border: 1px solid #ffffff24;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 80px #2475bf22;
+
+    animation: rotate 35s linear infinite;
+
+}
+
+
+
+.visual-circle::before,
+
+.visual-circle::after {
+
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid #ffffff17;
+
+    border-radius: 50%;
+
+}
+
+
+
+.visual-circle::before {
+
+    inset: 28px;
+
+}
+
+
+
+.visual-circle::after {
+
+    inset: 65px;
+
+}
+
+
+
+.visual-orbit {
+
+    position: absolute;
+
+    width: 365px;
+
+    height: 130px;
+
+    border: 1px solid #ff8a2350;
+
+    border-radius: 50%;
+
+    transform: rotate(-35deg);
+
+    animation: orbit 7s ease-in-out infinite;
+
+}
+
+
+
+.boiler {
+
+    width: 180px;
+
+    height: 245px;
+
+    background: linear-gradient(135deg, #ffffff, #c8d6e5);
+
+    border-radius: 15px;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow: 0 30px 70px #0007;
+
+    animation: float 5s ease-in-out infinite;
+
+}
+
+
+
+.boiler-top {
+
+    height: 13px;
+
+    background: #e6edf4;
+
+    border-radius: 15px 15px 0 0;
+
+}
+
+
+
+.boiler-brand {
+
+    text-align: center;
+
+    margin-top: 16px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: #78889a;
+
+}
+
+
+
+.boiler-screen {
+
+    width: 85px;
+
+    height: 43px;
+
+    margin: 17px auto 20px;
+
+    background: #14243b;
+
+    border-radius: 5px;
+
+    display: grid;
+
+    place-items: center;
+
+    color: #72d7ee;
+
+    font-size: 17px;
+
+    box-shadow: inset 0 0 12px #000;
+
+}
+
+
+
+.boiler-controls {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+}
+
+
+
+.boiler-controls span {
+
+    width: 18px;
+
+    height: 18px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(145deg, #ddd, #888);
+
+    border: 2px solid white;
+
+}
+
+
+
+.boiler-bottom {
+
+    width: 100%;
+
+    height: 13px;
+
+    background: #b9c7d6;
+
+    position: absolute;
+
+    bottom: 0;
+
+    border-radius: 0 0 15px 15px;
+
+}
+
+
+
+.float-card {
+
+    position: absolute;
+
+    z-index: 3;
+
+    background: #ffffff12;
+
+    border: 1px solid #ffffff30;
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 12px;
+
+    padding: 14px 18px;
+
+    color: white;
+
+    font-size: 12px;
+
+    box-shadow: 0 10px 35px #0002;
+
+}
+
+
+
+.float-card strong {
+
+    display: block;
+
+    color: var(--orange);
+
+    font-size: 17px;
+
+    margin-bottom: 4px;
+
+}
+
+
+
+.card-one {
+
+    top: 45px;
+
+    right: -15px;
+
+    animation: float 5s ease-in-out infinite;
+
+}
+
+
+
+.card-two {
+
+    bottom: 40px;
+
+    left: -20px;
+
+    animation: float 5s ease-in-out 1s infinite;
+
+}
+
+
+
+.visual-glow {
+
+    position: absolute;
+
+    width: 230px;
+
+    height: 230px;
+
+    background: #2475bf30;
+
+    filter: blur(75px);
+
+    border-radius: 50%;
+
+    z-index: 1;
+
+}
+
+
+
+.hero-bottom-line {
+
+    position: absolute;
+
+    bottom: 0;
+
+    right: 0;
+
+    width: 100%;
+
+    height: 3px;
+
+    background: linear-gradient(90deg, transparent, var(--orange), transparent);
+
+    opacity: .7;
+
+}
+
+
+
+
+
+/* GENERAL SECTIONS */
+
+
+
+.section {
+
+    padding: 90px 8%;
+
+}
+
+
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+
+.section-heading small,
+
+.about-content > small {
+
+    color: var(--orange);
+
+    font-weight: 700;
+
+    font-size: 12px;
+
+}
+
+
+
+.section-heading h2 {
+
+    font-size: 29px;
+
+    margin: 12px 0;
+
+}
+
+
+
+.section-heading p {
+
+    font-size: 13px;
+
+    color: var(--muted);
+
+    line-height: 2;
+
+}
+
+
+
+
+
+/* SERVICES */
+
+
+
+.services {
+
+    background: var(--bg);
+
+}
+
+
+
+.service-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+
+.service-card {
+
+    background: white;
+
+    border: 1px solid #edf0f5;
+
+    padding: 27px 22px;
+
+    border-radius: 15px;
+
+    transition: transform .35s, box-shadow .35s, border-color .35s;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+
+.service-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 4px;
+
+    height: 0;
+
+    background: var(--orange);
+
+    right: 0;
+
+    top: 0;
+
+    transition: height .35s;
+
+}
+
+
+
+.service-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px #10244812;
+
+    border-color: #ffe1c6;
+
+}
+
+
+
+.service-card:hover::after {
+
+    height: 100%;
+
+}
+
+
+
+.icon-box {
+
+    width: 53px;
+
+    height: 53px;
+
+    border-radius: 12px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: #fff3e8;
+
+    color: #ed821f;
+
+    margin-bottom: 22px;
+
+    transition: background .3s, transform .3s;
+
+}
+
+
+
+.service-card:hover .icon-box {
+
+    background: var(--orange);
+
+    color: white;
+
+    transform: scale(1.07) rotate(-4deg);
+
+}
+
+
+
+.icon-box svg {
+
+    width: 25px;
+
+    height: 25px;
+
+    stroke: currentColor;
+
+    fill: none;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+}
+
+
+
+.service-card h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+.service-card p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 2.2;
+
+}
+
+
+
+.more {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    color: #e77d20;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+
+
+
+/* ADVANTAGES */
+
+
+
+.advantages {
+
+    padding: 35px 8%;
+
+    background: white;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    border-top: 1px solid #edf0f5;
+
+    border-bottom: 1px solid #edf0f5;
+
+}
+
+
+
+.advantage {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    justify-content: center;
+
+}
+
+
+
+.advantage-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 12px;
+
+    color: var(--orange);
+
+    background: #fff3e8;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    transition: transform .3s;
+
+}
+
+
+
+.advantage:hover .advantage-icon {
+
+    transform: rotate(-8deg);
+
+}
+
+
+
+.advantage strong,
+
+.advantage span {
+
+    display: block;
+
+}
+
+
+
+.advantage strong {
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+
+}
+
+
+
+.advantage span {
+
+    font-size: 11px;
+
+    color: var(--muted);
+
+}
+
+
+
+
+
+/* STATS */
+
+
+
+.stats {
+
+    background: var(--dark);
+
+    color: white;
+
+}
+
+
+
+.stats .section-heading p {
+
+    color: #a9b7c9;
+
+}
+
+
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+
+.stat {
+
+    text-align: center;
+
+    padding: 30px 15px;
+
+    background: #ffffff08;
+
+    border: 1px solid #ffffff12;
+
+    border-radius: 14px;
+
+    transition: background .3s, transform .3s;
+
+}
+
+
+
+.stat:hover {
+
+    background: #ffffff12;
+
+    transform: translateY(-5px);
+
+}
+
+
+
+.stat strong {
+
+    color: var(--orange);
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    display: block;
+
+    margin-bottom: 8px;
+
+}
+
+
+
+.stat span {
+
+    font-size: 12px;
+
+    color: #b5c1d1;
+
+}
+
+
+
+
+
+/* PROCESS */
+
+
+
+.process {
+
+    background: white;
+
+}
+
+
+
+.process-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+
+.process-card {
+
+    padding: 30px;
+
+    border: 1px solid #e9edf3;
+
+    border-radius: 14px;
+
+    position: relative;
+
+    transition: .3s;
+
+    background: white;
+
+}
+
+
+
+.process-card:hover {
+
+    border-color: #ffce9f;
+
+    box-shadow: 0 15px 35px #1024480b;
+
+    transform: translateY(-5px);
+
+}
+
+
+
+.process-number {
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    color: #ff8a2350;
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    transition: color .3s;
+
+}
+
+
+
+.process-card:hover .process-number {
+
+    color: var(--orange);
+
+}
+
+
+
+.process-card h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 12px;
+
+}
+
+
+
+.process-card p {
+
+    font-size: 12px;
+
+    color: var(--muted);
+
+    line-height: 2.3;
+
+}
+
+
+
+
+
+/* ABOUT */
+
+
+
+.about {
+
+    background: #f6f8fc;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 50px;
+
+}
+
+
+
+.about-content {
+
+    max-width: 600px;
+
+}
+
+
+
+.about-content h2 {
+
+    font-size: 28px;
+
+    line-height: 1.8;
+
+    margin: 15px 0;
+
+}
+
+
+
+.about-content h2 span {
+
+    color: var(--orange);
+
+}
+
+
+
+.about-content p {
+
+    font-size: 13px;
+
+    line-height: 2.5;
+
+    color: #778398;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.about-box {
+
+    width: 300px;
+
+    min-height: 230px;
+
+    background: linear-gradient(140deg, #10294e, #174c82);
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    isolation: isolate;
+
+    box-shadow: 0 20px 45px #10294e20;
+
+}
+
+
+
+.about-box-decoration {
+
+    position: absolute;
+
+    width: 230px;
+
+    height: 230px;
+
+    border: 1px solid #ffffff15;
+
+    border-radius: 50%;
+
+    left: -100px;
+
+    bottom: -130px;
+
+    z-index: -1;
+
+}
+
+
+
+.about-label {
+
+    font-size: 12px;
+
+    color: #c6d3e3;
+
+}
+
+
+
+.about-box strong {
+
+    font-size: 45px;
+
+    color: var(--orange);
+
+    margin: 10px 0;
+
+}
+
+
+
+.about-box > span:last-of-type {
+
+    font-size: 12px;
+
+    line-height: 2;
+
+    color: #dce6f5;
+
+}
+
+
+
+.about-box-line {
+
+    width: 45px;
+
+    height: 3px;
+
+    background: var(--orange);
+
+    margin-top: 20px;
+
+    border-radius: 10px;
+
+}
+
+
+
+
+
+/* CONTACT */
+
+
+
+.contact {
+
+    background: white;
+
+}
+
+
+
+.contact-form {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    display: grid;
+
+    gap: 14px;
+
+    padding: 30px;
+
+    background: #f9fafc;
+
+    border: 1px solid #edf0f5;
+
+    border-radius: 16px;
+
+    box-shadow: 0 15px 40px #10244808;
+
+}
+
+
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 13px;
+
+}
+
+
+
+.contact-form input,
+
+.contact-form textarea,
+
+.contact-form select {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #e2e7ef;
+
+    border-radius: 9px;
+
+    background: white;
+
+    outline: none;
+
+    font-size: 13px;
+
+    color: var(--dark);
+
+    transition: border-color .3s, box-shadow .3s;
+
+}
+
+
+
+.contact-form input:focus,
+
+.contact-form textarea:focus,
+
+.contact-form select:focus {
+
+    border-color: var(--orange);
+
+    box-shadow: 0 0 0 3px #ff8a2315;
+
+}
+
+
+
+.contact-form textarea {
+
+    resize: vertical;
+
+    min-height: 110px;
+
+}
+
+
+
+.contact-form button {
+
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+}
+
+
+
+\#formMessage {
+
+    color: #16845c;
+
+    font-size: 13px;
+
+    text-align: center;
+
+}
+
+
+
+
+
+/* FOOTER */
+
+
+
+footer {
+
+    padding: 35px 8%;
+
+    background: var(--dark);
+
+    color: #aab8ca;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    font-size: 12px;
+
+}
+
+
+
+.footer-brand strong,
+
+.footer-brand span {
+
+    display: block;
+
+}
+.footer-brand strong {
+
+    color: white;
+
+    font-size: 19px;
+
+    margin-bottom: 7px;
+
+}
+.footer-brand strong::first-letter {
+
+    color: var(--orange);
+
+}
+.footer-links {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+.footer-links a {
+
+    transition: color .3s;
+
+}
+
+.footer-links a:hover {
+
+    color: var(--orange);
+
+}
+
+
+
+.footer-copy {
+
+    color: #8191a7;
+
+}
+
+
+/* FLOATING CALL */
+.floating-call {
+
+    position: fixed;
+
+    bottom: 25px;
+
+    left: 25px;
+
+    width: 53px;
+
+    height: 53px;
+
+    border-radius: 50%;
+
+    background: var(--orange);
+
+    display: grid;
+
+    place-items: center;
+
+    color: white;
+
+    z-index: 90;
+
+    box-shadow: 0 8px 25px #ff8a2350;
+
+    transition: transform .3s, box-shadow .3s;
+
+}
+
+
+
+.floating-call:hover {
+
+    transform: translateY(-5px) scale(1.05);
+
+    box-shadow: 0 12px 30px #ff8a2370;
+
+}
+
+
+
+.call-symbol {
+
+    font-size: 27px;
+
+    line-height: 1;
+
+    transform: rotate(45deg);
+
+}
+
+
+
+.call-ring {
+
+    position: absolute;
+
+    inset: -5px;
+
+    border: 1px solid #ff8a2380;
+
+    border-radius: 50%;
+
+    animation: callPulse 2.5s infinite;
+
+}
+
+
+
+
+
+/* REVEAL ANIMATION */
+
+
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(24px);
+
+    transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+
+.service-card:nth-child(2),
+
+.process-card:nth-child(2) {
+
+    transition-delay: .08s;
+
+}
+
+
+
+.service-card:nth-child(3),
+
+.process-card:nth-child(3) {
+
+    transition-delay: .16s;
+
+}
+
+
+
+.service-card:nth-child(4) {
+
+    transition-delay: .24s;
+
+}
+
+
+
+
+
+/* KEYFRAMES */
+
+
+
+@keyframes float {
+
+    0%, 100% {
+
+        transform: translateY(0);
+
+    }
+
+
+
+    50% {
+
+        transform: translateY(-12px);
+
+    }
+
+}
+
+
+
+@keyframes rotate {
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+
+@keyframes orbit {
+
+    0%, 100% {
+
+        transform: rotate(-35deg) scale(1);
+
+    }
+
+
+
+    50% {
+
+        transform: rotate(-25deg) scale(1.04);
+
+    }
+
+}
+
+
+
+@keyframes pulse {
+
+    0%, 100% {
+
+        box-shadow: 0 0 0 4px #ff8a2320;
+
+    }
+
+
+
+    50% {
+
+        box-shadow: 0 0 0 7px #ff8a230b;
+
+    }
+
+}
+
+
+
+@keyframes callPulse {
+
+    0% {
+
+        transform: scale(.9);
+
+        opacity: .9;
+
+    }
+
+
+
+    100% {
+
+        transform: scale(1.5);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+
+
+@media(max-width: 1050px) {
+
+
+
+    header {
+
+        padding-right: 5%;
+
+        padding-left: 5%;
+
+    }
+
+
+
+    nav {
+
+        gap: 18px;
+
+    }
+
+
+
+    .hero {
+
+        padding-right: 6%;
+
+        padding-left: 6%;
+
+    }
+.service-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+
+
+
+@media(max-width: 750px) {
+
+
+
+    header {
+
+        padding: 17px 5%;
+
+    }
+
+
+
+    nav {
+
+        position: absolute;
+
+        top: 100%;
+
+        right: 0;
+
+        width: 100%;
+
+        background: #0a1d39;
+
+        padding: 15px 6%;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        border-top: 1px solid #ffffff15;
+
+        box-shadow: 0 15px 25px #0003;
+
+    }
+
+
+
+    nav.open {
+
+        display: flex;
+
+        animation: menuEnter .25s ease;
+
+    }
+
+
+
+    nav a {
+
+        padding: 13px 0;
+
+        border-bottom: 1px solid #ffffff0c;
+
+    }
+
+
+
+    nav a::after {
+
+        display: none;
+
+    }
+
+
+
+    .menu-toggle {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 4px;
+
+        margin-right: auto;
+
+        margin-left: 12px;
+
+    }
+
+
+
+    .menu-toggle span {
+
+        width: 23px;
+
+        height: 2px;
+
+        background: white;
+
+        border-radius: 5px;
+
+        transition: .3s;
+
+    }
+
+
+
+    .menu-toggle.active span:first-child {
+
+        transform: translateY(7px) rotate(45deg);
+
+    }
+
+
+
+    .menu-toggle.active span:nth-child(2) {
+
+        opacity: 0;
+
+    }
+
+
+
+    .menu-toggle.active span:last-child {
+
+        transform: translateY(-7px) rotate(-45deg);
+
+    }
+
+
+
+    .header-btn {
+        font-size: clamp(10px, 2.8vw, 12px);
+        padding: 10px clamp(8px, 2.5vw, 12px);
+        margin: 0;
+        white-space: nowrap;
+        flex: 0 0 auto;
+    }
+
+
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 65px 6%;
+
+    }
+
+
+
+    .hero-content {
+
+        margin: auto;
+
+    }
+
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+
+
+    .hero-trust {
+
+        justify-content: center;
+
+    }
+.advantages {
+
+        grid-template-columns: 1fr;
+
+        padding: 35px 8%;
+
+        gap: 25px;
+
+    }
+
+
+
+    .advantage {
+
+        justify-content: flex-start;
+
+    }
+
+
+
+    .process-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .about {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+
+    .about-box {
+
+        width: 100%;
+
+    }
+
+
+
+    footer {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+
+    .footer-links {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+}
+
+
+
+
+
+@media(max-width: 500px) {
+
+
+
+    .service-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .stats-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .hero h1 {
+
+        font-size: 32px;
+
+    }
+.section {
+
+        padding: 65px 6%;
+
+    }
+
+
+
+    .section-heading h2 {
+
+        font-size: 23px;
+
+    }
+
+
+
+    .contact-form {
+
+        padding: 18px;
+
+    }
+
+
+
+    .floating-call {
+
+        width: 47px;
+
+        height: 47px;
+
+        bottom: 17px;
+
+        left: 17px;
+
+    }
+
+}
+
+
+
+
+
+
+
+/* FLUID RESPONSIVE FIX — preserves existing layout and interactions */
+.hero-visual {
+    width: min(100%, 390px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    min-width: 0;
+    transform: none;
+    margin: 0 auto;
+}
+
+.visual-circle {
+    width: 84%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+.visual-orbit {
+    width: 94%;
+    height: 34%;
+}
+
+.boiler {
+    width: clamp(135px, 46%, 180px);
+    height: auto;
+    aspect-ratio: 180 / 245;
+}
+
+.float-card {
+    width: max-content;
+    max-width: 47%;
+    padding: clamp(8px, 2.5vw, 14px) clamp(9px, 3vw, 18px);
+    font-size: clamp(9px, 2.5vw, 12px);
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.card-one {
+    right: 0;
+    top: 12%;
+}
+
+.card-two {
+    left: 0;
+    bottom: 12%;
+}
+
+@media (max-width: 750px) {
+    header {
+        gap: clamp(7px, 2vw, 12px);
+    }
+
+    .logo {
+        min-width: 0;
+        font-size: clamp(13px, 3.8vw, 20px);
+    }
+
+    .phone-icon {
+        margin-left: 4px;
+    }
+
+    .hero-visual {
+        flex: 0 1 auto;
+    }
+}
+
+@media (max-width: 380px) {
+    header {
+        padding-right: 4%;
+        padding-left: 4%;
+        gap: 7px;
+    }
+
+    .logo {
+        font-size: clamp(12px, 3.6vw, 14px);
+    }
+
+    .header-btn {
+        font-size: 10px;
+        padding: 8px 9px;
+    }
+
+    .menu-toggle span {
+        width: 21px;
+    }
+
+    .hero {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .hero-visual {
+        width: min(100%, 310px);
+    }
+
+    .float-card {
+        max-width: 46%;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 1050px) {
+    .hero-visual {
+        width: min(36vw, 350px);
+        flex-basis: min(36vw, 350px);
+    }
+}
+
+
+/* ACCESSIBILITY */
+
+
+
+@keyframes menuEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-8px);
+
+    }
+
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+
+@media(prefers-reduced-motion: reduce) {
+
+
+
+    *,
+
+    *::before,
+
+    *::after {
+
+        scroll-behavior: auto !important;
+
+        animation-duration: .01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: .01ms !important;
+
+    }
+
+
+
+    .reveal {
+
+        opacity: 1;
+
+        transform: none;
+
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header id="header">
+
+    <a href="#" class="logo">
+        محل قرارگیری <span>لوگو</span>
+    </a>
+
+    <nav id="nav">
+        <a href="#home" class="active">صفحه اصلی</a>
+        <a href="#services">خدمات</a>
+        <a href="#process">مراحل کار</a>
+        <a href="#about">درباره من</a>
+        <a href="#contact">تماس با من</a>
+    </nav>
+
+    <a href="tel:09121234567" class="header-btn">
+        <span class="phone-icon">↗</span>
+        تماس مستقیم
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-bg-circle"></div>
+    <div class="hero-grid"></div>
+
+    <div class="hero-content reveal">
+
+        <div class="tag">
+            <span class="status-dot"></span>
+            خدمات تخصصی تأسیسات ساختمان
+        </div>
+
+        <h1>
+            آسایش خانه شما،
+            <span>تخصص ماست.</span>
+        </h1>
+
+        <p>
+            سرویس، تعمیر و نصب انواع پکیج، رادیاتور
+            و سیستم‌های سرمایشی با کیفیت حرفه‌ای،
+            قیمت منصفانه و پشتیبانی مطمئن.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#contact" class="primary-btn">
+                ثبت درخواست سرویس
+                <span>←</span>
+            </a>
+
+            <a href="#services" class="secondary-btn">
+                مشاهده خدمات
+            </a>
+
+        </div>
+
+        <div class="hero-trust">
+            <div class="trust-line"></div>
+            <span>دقت در اجرا، تعهد در خدمات</span>
+        </div>
+
+    </div>
+
+
+    <!-- BOILER VISUAL -->
+
+    <div class="hero-visual reveal">
+
+        <div class="visual-circle"></div>
+        <div class="visual-orbit"></div>
+
+        <div class="boiler">
+
+            <div class="boiler-top"></div>
+
+            <div class="boiler-brand">َّFARZAD</div>
+
+            <div class="boiler-screen">
+                55°
+            </div>
+
+            <div class="boiler-controls">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="boiler-bottom"></div>
+
+        </div>
+
+        <div class="float-card card-one">
+            <strong>24/7</strong>
+            پاسخگویی به درخواست‌ها
+        </div>
+
+        <div class="float-card card-two">
+            <strong>100%</strong>
+            تعهد به کیفیت خدمات
+        </div>
+
+        <div class="visual-glow"></div>
+
+    </div>
+
+    <div class="hero-bottom-line"></div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services section" id="services">
+
+    <div class="section-heading reveal">
+
+        <small>خدمات تخصصی من</small>
+
+        <h2>چه کاری برای شما انجام می‌دهم؟</h2>
+
+        <p>
+            ارائه خدمات تخصصی برای آسایش بیشتر شما
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+        <article class="service-card reveal">
+
+            <div class="icon-box">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3v18M7 7l5-4 5 4M7 17l5 4 5-4"/>
+                    <path d="M4 12h16"/>
+                </svg>
+            </div>
+
+            <h3>سرویس و تعمیر پکیج</h3>
+
+            <p>
+                عیب‌یابی، سرویس دوره‌ای و تعمیر انواع پکیج دیواری.
+            </p>
+
+            <a href="#contact" class="more">
+                ثبت درخواست <span>←</span>
+            </a>
+
+        </article>
+
+
+        <article class="service-card reveal">
+
+            <div class="icon-box">
+                <svg viewBox="0 0 24 24">
+                    <rect x="3" y="5" width="18" height="14" rx="2"/>
+                    <path d="M7 8v8M11 8v8M15 8v8M19 8v8"/>
+                </svg>
+            </div>
+
+            <h3>تعمیر رادیاتور</h3>
+
+            <p>
+                بررسی و رفع مشکلات گرمایش و عملکرد رادیاتورها.
+            </p>
+
+            <a href="#contact" class="more">
+                ثبت درخواست <span>←</span>
+            </a>
+
+        </article>
+
+
+        <article class="service-card reveal">
+
+            <div class="icon-box">
+                <svg viewBox="0 0 24 24">
+                    <rect x="2" y="5" width="20" height="12" rx="2"/>
+                    <path d="M6 20h12M8 9h8M12 9v4"/>
+                </svg>
+            </div>
+
+            <h3>سرویس کولر گازی</h3>
+
+            <p>
+                سرویس، عیب‌یابی و بررسی سیستم‌های سرمایشی.
+            </p>
+
+            <a href="#contact" class="more">
+                ثبت درخواست <span>←</span>
+            </a>
+
+        </article>
+
+
+        <article class="service-card reveal">
+
+            <div class="icon-box">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2v20M5 6l7-4 7 4M5 18l7 4 7-4"/>
+                    <path d="M3 12h18"/>
+                </svg>
+            </div>
+
+            <h3>نصب تجهیزات</h3>
+
+            <p>
+                نصب و راه‌اندازی تجهیزات گرمایشی و سرمایشی.
+            </p>
+
+            <a href="#contact" class="more">
+                ثبت درخواست <span>←</span>
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ADVANTAGES -->
+
+<section class="advantages">
+
+    <div class="advantage reveal">
+        <div class="advantage-icon">01</div>
+        <div>
+            <strong>قیمت منصفانه</strong>
+            <span>هزینه شفاف و متناسب با خدمات</span>
+        </div>
+    </div>
+
+    <div class="advantage reveal">
+        <div class="advantage-icon">02</div>
+        <div>
+            <strong>کیفیت در اجرا</strong>
+            <span>توجه به جزئیات و استانداردها</span>
+        </div>
+    </div>
+
+    <div class="advantage reveal">
+        <div class="advantage-icon">03</div>
+        <div>
+            <strong>پاسخگویی سریع</strong>
+            <span>هماهنگی آسان برای دریافت خدمات</span>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats section">
+
+    <div class="section-heading reveal">
+        <small>عملکرد و تجربه</small>
+        <h2>اعتماد، نتیجه عملکرد حرفه‌ای</h2>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat reveal">
+            <strong data-count="5">0</strong>
+            <span>سال تجربه کاری</span>
+        </div>
+
+        <div class="stat reveal">
+            <strong data-count="300">0</strong>
+            <span>خدمات انجام شده</span>
+        </div>
+
+        <div class="stat reveal">
+            <strong data-count="100">0</strong>
+            <span>درصد تعهد به کیفیت</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="process section" id="process">
+
+    <div class="section-heading reveal">
+        <small>مراحل دریافت خدمات</small>
+        <h2>به همین سادگی!</h2>
+        <p>برای دریافت خدمات فقط سه قدم فاصله دارید.</p>
+    </div>
+
+    <div class="process-grid">
+
+        <div class="process-card reveal">
+            <span class="process-number">01</span>
+            <h3>ثبت درخواست</h3>
+            <p>از طریق فرم سایت یا تماس تلفنی درخواست خود را ثبت کنید.</p>
+        </div>
+
+        <div class="process-card reveal">
+            <span class="process-number">02</span>
+            <h3>هماهنگی و بررسی</h3>
+            <p>جزئیات مشکل بررسی و زمان مناسب برای مراجعه هماهنگ می‌شود.</p>
+        </div>
+
+        <div class="process-card reveal">
+            <span class="process-number">03</span>
+            <h3>انجام خدمات</h3>
+            <p>خدمات مورد نیاز با دقت و توجه به کیفیت انجام می‌شود.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about section" id="about">
+
+    <div class="about-content reveal">
+
+        <small>درباره من</small>
+
+        <h2>
+            تخصص، دقت و اعتماد
+            <span>در کنار شما</span>
+        </h2>
+
+        <p>
+            من در زمینه سرویس و تعمیر سیستم‌های گرمایشی
+            و سرمایشی فعالیت می‌کنم. هدفم ارائه خدمات
+            تخصصی، برخورد مناسب و جلب رضایت مشتریان است.
+            تلاش می‌کنم هر درخواست را با دقت و مسئولیت‌پذیری
+            انجام دهم.
+        </p>
+
+        <a href="#contact" class="primary-btn">
+            ارتباط با من ←
+        </a>
+
+    </div>
+
+
+    <div class="about-box reveal">
+
+        <div class="about-box-decoration"></div>
+
+        <span class="about-label">تجربه و تخصص</span>
+
+        <strong>+۵</strong>
+
+        <span>سال تجربه در زمینه تأسیسات و خدمات تخصصی ساختمان</span>
+
+        <div class="about-box-line"></div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact section" id="contact">
+
+    <div class="section-heading reveal">
+
+        <small>ارتباط با من</small>
+
+        <h2>نیاز به سرویس دارید؟</h2>
+
+        <p>
+            درخواست خود را ثبت کنید تا برای هماهنگی با شما تماس بگیرم.
+        </p>
+
+    </div>
+
+
+    <form class="contact-form reveal" id="requestForm">
+
+        <div class="form-row">
+
+            <input type="text" placeholder="نام و نام خانوادگی" required>
+
+            <input type="tel" placeholder="شماره تماس" required>
+
+        </div>
+
+        <select required>
+            <option value="">انتخاب نوع خدمات</option>
+            <option>سرویس و تعمیر پکیج</option>
+            <option>تعمیر رادیاتور</option>
+            <option>سرویس کولر گازی</option>
+            <option>نصب تجهیزات</option>
+            <option>سایر موارد</option>
+        </select>
+
+        <textarea placeholder="توضیحات درخواست شما..."></textarea>
+
+        <button type="submit" class="primary-btn">
+            ارسال درخواست
+            <span>←</span>
+        </button>
+
+        <div id="formMessage"></div>
+
+    </form>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-brand">
+        <strong>تأسیسات فراز.</strong>
+        <span>خدمات تخصصی تأسیسات ساختمان</span>
+    </div>
+
+    <div class="footer-links">
+        <a href="#home">صفحه اصلی</a>
+        <a href="#services">خدمات</a>
+        <a href="#about">درباره من</a>
+        <a href="#contact">تماس</a>
+    </div>
+
+    <div class="footer-copy">
+        تمامی حقوق محفوظ است.
+    </div>
+
+</footer>
+
+
+<!-- FLOATING CALL -->
+
+<a href="tel:09121234567" class="floating-call" aria-label="تماس مستقیم">
+    <span class="call-ring"></span>
+    <span class="call-symbol">+</span>
+</a>
+
+
+<script>
+
+// Header scroll effect
+
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 30);
+}, { passive: true });
+
+
+// Mobile menu
+
+const menuToggle = document.getElementById("menuToggle");
+const nav = document.getElementById("nav");
+
+menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("open");
+    menuToggle.classList.toggle("active");
+});
+
+nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        menuToggle.classList.remove("active");
+    });
+});
+
+
+// Scroll reveal
+
+const revealObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+        }
+
+    });
+
+}, {
+    threshold: 0.12
+});
+
+document.querySelectorAll(".reveal").forEach(element => {
+    revealObserver.observe(element);
+});
+
+
+// Counter animation
+
+const counterObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (!entry.isIntersecting) return;
+
+        const counter = entry.target;
+        const target = Number(counter.dataset.count);
+        const duration = 1200;
+        const start = performance.now();
+
+        function update(now) {
+
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+
+            counter.textContent = Math.floor(target * eased).toLocaleString("fa-IR") +
+                (target === 100 ? "٪" : target === 5 || target === 300 ? "+" : "");
+
+            if (progress < 1) {
+                requestAnimationFrame(update);
+            }
+        }
+
+        requestAnimationFrame(update);
+        counterObserver.unobserve(counter);
+
+    });
+
+}, { threshold: 0.5 });
+
+document.querySelectorAll("[data-count]").forEach(counter => {
+    counterObserver.observe(counter);
+});
+
+
+// Contact form demo
+
+document.getElementById("requestForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    document.getElementById("formMessage").textContent =
+        "درخواست شما در نسخه نمایشی ثبت شد.";
+
+    this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
